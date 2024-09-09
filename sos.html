@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Your existing styles here... */
+
+        #sosButton {
+            background-color: #ff4d4d; /* Red color for SOS */
+            color: white;
+            padding: 15px 30px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #sosButton:hover {
+            background-color: #990000; /* Darker red on hover */
+        }
+    </style>
+    <title>Raksha Kavach</title>
+</head>
+
+<body>
+    <div id="main">
+        <nav>
+            <!-- Your navigation bar here... -->
+        </nav>
+
+        <section id="body">
+            <div class="body container">
+                <div>
+                    <h1>Welcome To Raksha Kavach</h1>
+                    <a href="#" type="button" class="btn">Explore</a>
+
+                    <!-- SOS Call Button -->
+                    <button id="sosButton" onclick="makeSOSCall()">SOS Call</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Include Twilio Client library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.twilio.com/voice/client/dist/twilio.js"></script>
+
+    <script>
+        // Your existing JavaScript code...
+
+        // SOS Call Function
+        function makeSOSCall() {
+            const accountSid = 'YOUR_TWILIO_ACCOUNT_SID';
+            const authToken = 'YOUR_TWILIO_AUTH_TOKEN';
+            const twilioPhone = 'YOUR_TWILIO_PHONE_NUMBER';
+            const toPhoneNumber = 'TO_PHONE_NUMBER'; // Replace with the emergency phone number
+
+            // Initialize Twilio client
+            Twilio.Device.setup(authToken);
+
+            // Make a Twilio voice call
+            Twilio.Device.connect({ phone: toPhoneNumber });
+        }
+    </script>
+
+    <!-- Embed Chatbot Script -->
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "s2cBTvz9P4P8-0AOJoQlY",
+            domain: "www.chatbase.co"
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="s2cBTvz9P4P8-0AOJoQlY" domain="www.chatbase.co" defer></script>
+</body>
+
+</html>

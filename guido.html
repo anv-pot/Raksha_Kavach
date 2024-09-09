@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #logo {
+            display: inline-block;
+            margin-left: 10px;
+            height: 60px; /* Set the height to match the login button */
+        }
+
+        #main {
+            width: 100%;
+            height: 100vh;
+            background-image: url('back3.jpeg');
+            background-size: cover;
+        }
+
+        nav {
+            width: 100%;
+            height: 80px;
+            background-color: rgba(237, 224, 224, 0.067);
+            line-height: 80px;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 30px;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            transition: 0.8s all;
+        }
+
+        nav ul li:hover {
+            background-color: rgb(130, 111, 111);
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000; /* Set text color to black */
+            padding: 30px;
+        }
+
+        h1 {
+            color: #000; /* Set text color to black */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 3rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #body {
+            padding: 3px; /* Add padding around the entire body content */
+        }
+
+        #body h1 {
+            margin-bottom: 10px;
+            font-size: 4rem;
+            font-family: 'cursive', sans-serif; /* Change 'Arial' to 'cursive' */
+            display: block;
+            width: fit-content;
+            position: relative;
+        }
+
+        #body .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            color: #000;
+            background-color: transparent;
+            border: 2px solid rgba(174, 136, 105, 0.508);
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            margin-top: 20px;
+            transition: 0.4s ease;
+            transition-property: background-color, color;
+        }
+
+        #body .btn:hover {
+            color: #fff;
+            background-color: tomato;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; 
+        }
+
+        #chatbot-icon {
+            width: 80px; 
+            height: 80px; 
+        }
+
+        #helpMeButton {
+            padding: 13px 30px;
+            color: #fff;
+            background-color: #ff6b89;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 10px;
+            left: 250px;
+        }
+
+        #helpMeButton:hover {
+            background-color: #f8c7d8;
+        }
+
+        #helpMeButton2 {
+            padding: 13px 30px;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 10px;
+            left: 350px;
+        }
+
+        #helpMeButton2:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <title>Raksha Kavach</title>
+</head>
+
+<body>
+    <div id="main">
+        <nav>
+            <a href="Rakshakavch.html"><img id="logo" src="logo1.jpeg" alt="Raksha Kavach Logo"></a>
+            <button id="helpMeButton" onclick="triggerHelp('helpmevoice1.mp4')">Help Me</button>
+            <button id="helpMeButton2" onclick="triggerHelp('helpmevoice2.mp4')">Help Me (Chatbot 2)</button>
+            <ul>
+                <li><a href="shop.html"><b>Shop</b></a></li>
+                <li><a href="login.html"><b>Login</b></a></li>
+                <li><a href="register.html"><b>Register</a></li>
+                <li><a href="Consultancy.html"><b>Consultancy</a></li>
+                <li><a href="discord.html"><b>Discord</a></li>
+                <li><a href="speakup.html">Speak Up &#127897;</a></li>
+            </ul>
+        </nav>
+
+        <section id="body">
+            <div class="body container">
+                <div>
+                    <h1>Welcome To Raksha Kavach</h1>
+                    <a href="defeats.mp4" type="button" class="btn">Explore</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chatbot script for the first chatbot -->
+    <script>
+        function triggerHelp(audioFile) {
+            const audio = new Audio(audioFile);
+            audio.volume = Math.min(1, audio.volume * 2);
+            audio.play();
+        }
+
+        window.embeddedChatbotConfig = {
+            chatbotId: "s2cBTvz9P4P8-0AOJoQlY",
+            domain: "www.chatbase.co"
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="s2cBTvz9P4P8-0AOJoQlY" domain="www.chatbase.co" defer></script>
+
+    <!-- Chatbot script for the second chatbot -->
+    <script>
+        function triggerHelp2() {
+            // Add logic for the second chatbot here
+            alert("Second Chatbot Triggered!");
+        }
+    </script>
+<script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "HH26fCkuB0-6mX1vnqhQv",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="HH26fCkuB0-6mX1vnqhQv"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+    
+    
+</body>
+
+</html>

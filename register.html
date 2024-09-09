@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raksha Kavach - Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #logo {
+            display: inline-block;
+            margin-left: 10px;
+            height: 60px; /* Set the height to match the login button */
+        }
+
+        #main {
+            position: relative;
+            width: 100%;
+            min-height: 130vh;
+            background-image: url('back3.jpeg');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(237, 224, 224, 0.067);
+            line-height: 80px;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 30px;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            transition: 0.8s all;
+        }
+
+        nav ul li:hover {
+            background-color: rgb(130, 111, 111);
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000; /* Set text color to black */
+            padding: 30px;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 70px auto; /* Adjusted margin for centering */
+            color: #381138; /* Purple */
+            min-height: 400px; /* Set a minimum height for the container */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #581e3d; /* DeepPink */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d59dad; /* MediumVioletRed */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <nav>
+            <a href="Rakshakavch.html"><img id="logo" src="logo1.jpeg" alt="Raksha Kavach Logo"></a>
+            <ul>
+                
+                <li><a href="login.html"><b>Login</b></a></li>
+                <li><a href="register.html"><b>Register</a></li>
+                <li><a href="Consultancy.html"><b>Consultancy</a></li>
+                <li><a href="discord.html"><b>Discord</a></li>
+                <li><a href="speakup.html">Speak Up &#127897;</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>Raksha Kavach - Register</h1>
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Choose Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="age">Your Age:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="sex">Your Sex:</label>
+                <select id="sex" name="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
